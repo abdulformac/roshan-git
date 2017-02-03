@@ -1,11 +1,11 @@
 #
-# Cookbook:: gitlab
+# Cookbook:: gitlab test
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 platform = node['platform_family']
-raise "Error: unsupported operating system #[platform]. please run this cookbook on RHEL/centos" if node['platform'] != 'centos'
+raise "Error: bad platform #[platform]. please run this cookbook on RHEL/centos" if node['platform'] != 'centos'
 
 node['gitlab-setup'] ['prereq_packages'].each do |pkg|
      package pkg
